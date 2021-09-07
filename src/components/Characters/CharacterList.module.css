@@ -12,7 +12,12 @@
 ul {
   list-style-type: none;
 }
-
+.pagination {
+  border-radius: 15px;
+  margin-top: 1rem;
+  background-color: red;
+  padding: 16px;
+}
 .errorMessage {
   color: white;
   font-family: "Shadows Into Light", cursive;
