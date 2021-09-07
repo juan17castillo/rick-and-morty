@@ -9,12 +9,12 @@ import {
  * Action creator that returns a function being able to use asynchronous code to call the Rick and Morty api through various state changes through dispatch.
  * @returns {Function} asynchronous function with the call to dispatchers for the global state change of the application
  */
-export const getCharacters = () => async (dispatch) => {
+export const getCharacters = (page) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
 
-    const { data } = await api.fetchCharacters();
-    dispatch({ type: FETCH_CHARACTERS, payload: data.results });
+    const { data } = await api.fetchCharacters(page);
+    dispatch({ type: FETCH_CHARACTERS, payload: data });
 
     dispatch({ type: END_LOADING });
   } catch (error) {

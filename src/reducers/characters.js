@@ -24,7 +24,10 @@ export default (
     case ERROR_MESSAGE:
       return { ...state, errorMessage: action.errorMessage };
     case FETCH_CHARACTERS:
-      return { ...state, characters: action.payload };
+      return { ...state, 
+        characters: action.payload.results, 
+        currentPage: Number(action.payload.info.next.slice(-1)) - 1,
+        numberOfPages: action.payload.info.pages };
     default:
       return state;
   }
