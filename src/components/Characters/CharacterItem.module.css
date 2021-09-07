@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap");
+.closeModal button {
+  float: right;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: larger;
+  font-style: inherit;
+  color: brown;
+}
+
+.closeModal h1 {
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  color: #00b0c8;
+}
+
+.details span {
+  font-family: "Glory", sans-serif;
+  color: slategray;
+  font-weight: 500;
+  font-size: 90%;
+}

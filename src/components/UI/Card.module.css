@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap");
+.card {
+  border-radius: 20px;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.26);
+  margin: 1rem auto;
+  max-width: 20rem;
+  background-color:#353434;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.details {
+  display: inline-flex;
+}
+
+.details h3{
+  font-family: "Shadows Into Light", cursive;
+  color: #03c7e0;
+  font-size: 20px;
+  padding-left: 12px;
+}
+
+.card button {
+  font-family: "Glory", sans-serif;
+  border: none;
+  background: none;
+  color: #7bcc0b;
+  font-size: 14px;
+  padding-left: 120px;
+  font-weight: bold;
+  float: right;
+}
+
+.card button:hover {
+  color: #508605;
+}

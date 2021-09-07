@@ -1,0 +1,22 @@
+img:last-child {
+  margin-bottom: 0px;
+}
+.header {
+  background: #7bcc0b;
+  height: 70px;
+  color: #efefef;
+}
+.headerFixed {
+  background: #7bcc0b;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  padding-top: 10px;
+  padding-top: 5px;
+}
+.headerFixed img {
+  z-index: 9999;
+  position: relative;
+}
