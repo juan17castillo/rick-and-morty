@@ -16,6 +16,7 @@ const Paginate = ({ page }) => {
     if (page) dispatch(getCharacters(page));
   }, [dispatch, page]);
 
+
   return (
     <Pagination
     classes={{ ul: classes.ul }}
@@ -25,6 +26,7 @@ const Paginate = ({ page }) => {
       color="primary"
       renderItem={(item) => (
         <PaginationItem
+           
           className={classes.item}
           {...item}
           component={Link}

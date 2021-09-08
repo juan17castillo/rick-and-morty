@@ -26,7 +26,7 @@ export default (
     case FETCH_CHARACTERS:
       return { ...state, 
         characters: action.payload.results, 
-        currentPage: Number(action.payload.info.next.slice(-1)) - 1,
+        currentPage: action.payload.info.next ? Number(action.payload.info.next.slice(-1)) - 1 : action.payload.info.pages,
         numberOfPages: action.payload.info.pages };
     default:
       return state;

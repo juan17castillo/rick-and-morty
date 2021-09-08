@@ -28,6 +28,17 @@ ul {
   transform: translate(-50%, -50%);
 }
 
+.pageNotFound {
+  color: white;
+  font-family: "Shadows Into Light", cursive;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .loader {
   color: #61c0ff;
   font-size: 90px;

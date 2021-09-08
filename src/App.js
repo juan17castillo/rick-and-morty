@@ -13,6 +13,9 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={() => <Redirect to="/characters" />} />
             <Route path="/characters" exact component={CharacterList} />
+            <Route path='*'>
+              <Redirect to='/' />
+            </Route>
         </Switch>
       </BrowserRouter>  
     );

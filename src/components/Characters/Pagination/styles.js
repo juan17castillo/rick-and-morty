@@ -10,6 +10,9 @@ export default makeStyles(() => ({
     "&$selected": {
         backgroundColor: "red",
         color: "white",
+    },
+    "&$ellipsis": {
+        color: "white",
     }
 },
   pagination: {
