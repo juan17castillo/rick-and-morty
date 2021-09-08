@@ -7,13 +7,6 @@ export default makeStyles(() => ({
   item: {
     color: "white",
     backgroundColor: "slategray",
-    "&$selected": {
-        backgroundColor: "red",
-        color: "white",
-    },
-    "&$ellipsis": {
-        color: "white",
-    }
 },
   pagination: {
     borderRadius: "15px",
