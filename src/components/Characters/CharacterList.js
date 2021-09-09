@@ -12,29 +12,34 @@ import useStyles from "./Pagination/styles";
  * @returns {JSX.Element} in charge of rendering a characters list.
  */
 const CharacterList = () => {
-  const styles = useStyles();
-  const query = useQuery();
-  const page = query.get("page") || 1;
-
   /**
    * Redux hook in charge of obtaining a fragment of the global state of the application
    */
-  const { characters, isLoading, errorMessage } = useSelector(
+  const { characters, isLoading, errorMessage, numberOfPages } = useSelector(
     (state) => state.characters
   );
-
-  
+  let numPages = 0;
+  if (numberOfPages) numPages = numberOfPages;
+  const styles = useStyles();
+  const query = useQuery();
+  const page = query.get("page") || 1;
 
   /**
    * Conditional rendering that JSX returns depending on the state obtained in the previous Hook Selector
    */
   return (
     <>
-    <div>
-    {+page > 34 && <h1 className={classes.pageNotFound}>404 This page does not exist.</h1>}
-      {errorMessage && !isLoading && <h2 className={classes.errorMessage}>Ups! Something went wrong.</h2>}
-      {isLoading && <div className={classes.loader}>Loading...</div>}
-    </div>
+      <div>
+        {+page > numPages && (
+          <h1 className={classes.pageNotFound}>
+            404 This page does not exist.
+          </h1>
+        )}
+        {errorMessage && !isLoading && (
+          <h2 className={classes.errorMessage}>Ups! Something went wrong.</h2>
+        )}
+        {isLoading && <div className={classes.loader}>Loading...</div>}
+      </div>
       <ul className={classes.wrapper}>
         {characters.map((character) => (
           <CharacterItem
@@ -46,9 +51,11 @@ const CharacterList = () => {
           />
         ))}
       </ul>
-      {!errorMessage && <Paper className={styles.pagination} elevation={6}>
-       <Pagination page={page} />       
-      </Paper>}
+      {!errorMessage && (
+        <Paper className={styles.pagination} elevation={6}>
+          <Pagination page={page} />
+        </Paper>
+      )}
     </>
   );
 };
